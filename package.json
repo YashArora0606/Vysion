@@ -1,0 +1,19 @@
+{
+  "name": "vysion",
+  "version": "1.0.0",
+  "description": "Electric City Hacks\r API_KEY = \"AIzaSyCzAeME9oN0uhFj27E_ebiC46aLSwg15-I\";",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lokhinw/vysion.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lokhinw/vysion/issues"
+  },
+  "homepage": "https://github.com/lokhinw/vysion#readme"
+}
