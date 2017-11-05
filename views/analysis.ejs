@@ -1,0 +1,74 @@
+<html>
+<head>
+  <title>Vysion</title>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <style>
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      font-family: Raleway;
+    }
+    .hero {
+      width: 100vw;
+      height: 75vh;
+    }
+    .hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    h1 {
+      text-align: center;
+      margin: 24px 0;
+      font-size: 50px;
+      font-weight: 700;
+    }
+    .flex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 50px;
+      flex-direction: column;
+    }
+    .wat {
+      position: relative;
+      background: #4183D7;
+      padding: 1.5rem 4.5rem;
+      border-radius: 5px;
+      font-size: 28px;
+    }
+    a,a:hover {
+      color: #fff;
+      text-decoration: none;
+    }
+    .flex p {
+      font-size: 48px;
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <h1>Vysion</h1>
+    <img style="-webkit-user-select: none;" src="http://192.168.8.210:8080/video">
+  </div>
+  <div class="flex">
+    <a class="wat" href="/analyzeImage">What is this?</a>
+    <% if (!data[0] && !data[0].length) { %>
+    <p>It is <%= data[1]%></p>
+    <% } else { %>
+    <p>The text reads <%= data[0]%></p>
+      <% } %>
+  </div>
+
+<script src="http://code.responsivevoice.org/responsivevoice.js"></script>
+<script>
+<% if (!data[0] && !data[0].length) { %>
+responsiveVoice.speak("It is <%= data[1]%>", "Australian Female");
+<% } else { %>
+responsiveVoice.speak("The text reads <%= data[0]%>", "Australian Female");
+  <% } %>
+</script>
+</body>
+</html>
